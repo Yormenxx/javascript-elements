@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Primitivos</h1>
+
+    <script>
+
+        //String representa cadenas de texto
+        let saludar = "Hola te estoy saludando";
+        //Podemos interpolar cadenas
+        let nombre = "Juan";
+        let edad = 22;
+        console.log(`Hola soy ${nombre} y tengo ${edad} años`);
+        //Propiedad length
+        console.log(saludar.length);
+        //Metodos
+        let mensaje = "Hola a todos";
+        console.log(mensaje.toUpperCase());
+        console.log(mensaje.toLowerCase());
+
+
+        //indexOf devuelve la posicion de la primera ocurrencia de un texto
+        let fraseClave = "El rápido zorro marrón.";
+        console.log(fraseClave.indexOf("zorro"));
+        console.log(fraseClave.indexOf("perro"));
+
+        //slice extrae una seccion de un string y devuelve una cadena nueva
+        let animal = "elefante";
+        console.log(animal.slice(0, 4));
+        console.log(animal.slice(4));
+
+        //.replace(valorABuscar, valorNuevo): Busca una coincidencia y la reemplaza. Por defecto, solo reemplaza la primera que encuentra.
+
+        let saludoOriginal = "Hola, mundo";
+        let nuevoSaludo = saludoOriginal.replace("mundo", "JavaScript");
+        console.log(nuevoSaludo);
+
+
+        //Numbers 
+        // En JavaScript, el tipo de dato Number se utiliza para representar tanto números enteros como números con punto decimal(flotantes).A diferencia de otros lenguajes de programación, no hay una distinción separada entre int y float; todo es un Number.
+
+        let edad2 = 25; // Entero
+        let precio = 99.95; // Decimal (punto flotante)
+
+        let a = 2;
+        let b = new Number(1);
+        let c = 7.19;
+        let d = "5.6";
+
+        console.log(a, b);
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(5));
+        console.log(parseInt(c));
+        console.log(parseFloat(c));
+        console.log(typeof c, typeof d);
+        console.log(a + b);
+        console.log(c + parseInt(d));
+        console.log(c + parseFloat(d));
+        console.log(c + Number.parseInt(d));
+        console.log(c + Number.parseFloat(d));
+
+        //Boolean
+        // Los booleanos son fundamentales para la programación porque permiten controlar el flujo de un programa, tomando decisiones basadas en si una condición es verdadera o falsa.
+        let usuarioActivo = true;
+        let tienePermisos = false;
+
+        //Udefined , null , NaN
+
+        // undefined es un valor primitivo que indica que una variable ha sido declarada pero no se le ha asignado un valor
+        let valorIndefinido; // undefined
+
+        // null es un valor primitivo que representa la ausencia intencional de cualquier valor o de un objeto. A diferencia de undefined, null se asigna explícitamente a una variable. Es como decir "aquí no hay nada, y lo digo a propósito".
+
+        let valorNulo = null;
+        console.log(valorNulo);
+
+        // NaN (Not-a-Number) es un valor especial que representa un resultado no numérico o indefinido. 
+
+        console.log(parseInt("hola")); // Salida: NaN
+
+        console.log(5 - "texto"); // Salida: NaN
+
+        console.log(Math.sqrt(-1)); // Salida: NaN
+
+
+        //Funciones 
+
+        // Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+
+        // Las funciones en JavaScript son objetos, un tipo especial de objetos:
+
+        // Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+
+  //Funciones declaradas VS funciones expresadas
+
+    funcionDeclarada();
+
+    /* function funcionDeclarada() {
+      console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+    } */
+
+    funcionDeclarada();
+
+    funcionExpresada();
+
+    //función anónima
+    const funcionExpresada = function () {
+      console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+    } 
+
+    funcionExpresada();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
