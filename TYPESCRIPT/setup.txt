@@ -1,0 +1,57 @@
+//Inicializar proyecto
+npm init -y
+//Instalar typescript como dependencia de desarrollo
+npm install typescript --save-dev
+//Crear el archivo de configuracion de ts --> tsconfig.ts
+npx tsc --init
+
+//Dentro de tsconfig.ts tenemos varias opciones importantes
+
+"target": Define la versión de ECMAScript a la que se compilará tu código (por ejemplo, "ES2020").
+
+"module": Especifica el sistema de módulos a usar ("commonjs", "esnext", etc.).
+
+"outDir": El directorio donde se guardarán los archivos JavaScript compilados.
+
+"rootDir": El directorio raíz de tu código fuente TypeScript.
+
+"strict": Habilita todas las opciones de verificación de tipo estricta para una mayor seguridad.
+
+//Para empezar a compilar usamos
+npx tsc
+
+//Para compilar de manera automatica usamos
+npx tsc --watch
+
+//Tambien para compilar usamo el package.json
+
+"scripts": {
+  "build": "npx tsc",
+  "start": "node dist/index.js",
+  "dev": "npx tsc --watch"
+}
+
+npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

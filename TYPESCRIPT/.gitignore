@@ -1,0 +1,9 @@
+# Archivos de compilación de TypeScript
+dist/
+build/
+*.js
+*.js.map
+
+# Dependencias
+node_modules/
+.pnp.js
