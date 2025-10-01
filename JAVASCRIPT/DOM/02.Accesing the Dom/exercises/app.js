@@ -9,6 +9,6 @@ document.querySelector("#yellow")
 // 5. Select all the elements which has the class of "teal" by using querySelectorAll
 document.querySelectorAll(".teal")
 
-
+console.log(document.documentElement)
 
 
