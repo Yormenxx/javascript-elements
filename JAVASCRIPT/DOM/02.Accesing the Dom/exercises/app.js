@@ -10,5 +10,5 @@ document.querySelector("#yellow")
 document.querySelectorAll(".teal")
 
 console.log(document.documentElement)
-
+console.log(document.documentElement.lang)
 
