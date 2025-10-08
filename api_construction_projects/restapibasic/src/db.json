@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "titulo": "Duna",
+    "genero": "Ciencia Ficción / Aventura",
+    "año": 2021
+  },
+  {
+    "id": 2,
+    "titulo": "Shrek",
+    "genero": "Animación / Comedia",
+    "año": 2001
+  },
+  {
+    "id": 3,
+    "titulo": "Interestelar",
+    "genero": "Ciencia Ficción / Drama",
+    "año": 2014
+  },
+  {
+    "id": 4,
+    "titulo": "El padrino",
+    "genero": "Crimen / Drama",
+    "año": 1972
+  },
+  {
+    "id": 5,
+    "titulo": "Five Nights at Freddy's",
+    "genero": "Terror / Misterio",
+    "año": 2023
+  },
+  {
+    "id": 6,
+    "titulo": "Dune: Parte Dos",
+    "genero": "Ciencia Ficción / Aventura",
+    "año": 2024
+  }
+]

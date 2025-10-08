@@ -1,0 +1,35 @@
+const express = require("express");
+const morgan = require("morgan");
+const app = express();
+
+const PORT =  process.env.PORT || 3000;
+
+app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}))
+
+app.use(require("./routes/router"));
+app.use("/api/movies",require("./routes/movies"))
+
+
+app.listen(PORT,()=>{
+    console.log(`Server is running on port ${PORT}`);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
