@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "baseUrl": "./",
+        "ignoreDeprecations": "6.0",
+        "outDir": "dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
