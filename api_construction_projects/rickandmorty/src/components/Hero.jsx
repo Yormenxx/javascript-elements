@@ -1,10 +1,14 @@
 import ram from "../assets/ram.png"
 import { FaPlay } from "react-icons/fa6";
+import img1 from "../assets/hero-bg.webp"
 
 const Hero = () => {
     return (
         <section  >
-            <div className="p-10 md:p-20  bg-[url('/src/assets/hero-bg.webp')] w-full h-[600px]  bg-cover bg-center bg-no-repeat">
+            <div className="relative z-20  w-full h-screen ">
+
+                <img src={img1} className="absolute inset-0 w-full h-full object-cover -z-10">
+                </img>
 
                 <div className="h-full flex  flex-col justify-center">
                     <div className="w-[300px] md:w-[600px]  justify-center overflow-hidden">

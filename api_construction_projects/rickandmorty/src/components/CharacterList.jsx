@@ -3,7 +3,7 @@ import Characters from "./Characters"
 import NavPage from "./NavPage"
 import Hero from "./Hero"
 import Loading from "./Loading"
-import { getCharacters} from "../api/rickAndMorty"
+import { getCharacters } from "../api/rickAndMorty"
 import SearchBar from "./SearchBar"
 
 const CharacterList = () => {
@@ -19,9 +19,9 @@ const CharacterList = () => {
         setPage(newPage);
     }
 
-     const handleSearch = (query) => {
+    const handleSearch = (query) => {
         setSearchQuery(query)
-        setPage(1) 
+        setPage(1)
     }
 
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -35,7 +35,7 @@ const CharacterList = () => {
             const promises = [];
 
 
-            const fetchingData = getCharacters(searchQuery,page)
+            const fetchingData = getCharacters(searchQuery, page)
                 .then(data => {
                     setCharacters(data.results || [])
                     setTotalPages(data.info?.pages || 1);
@@ -46,16 +46,7 @@ const CharacterList = () => {
                     setTotalPages(1);
                 })
 
-            // const fetchingData = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
-            //     .then(res => {
-            //         if (!res.ok) {
-            //             throw new Error(`Error en la respuesta: ${res.status}`);
-            //         }
-            //         return res.json();
-            //     })
-            //     .then(data => {
-            //         setCharacters(data.results)
-            //     })
+
             promises.push(fetchingData);
 
 
@@ -73,7 +64,7 @@ const CharacterList = () => {
             }
         }
         recivingData();
-    }, [page,searchQuery])
+    }, [page, searchQuery])
     return (
         <section className="bg-neutral-900">
 
@@ -83,18 +74,16 @@ const CharacterList = () => {
 
                 <article className="opacity-100 transition-opacity duration-500 ease-in-out">
                     <Hero />
-                    <SearchBar onSearch={handleSearch}/>
+                    <SearchBar onSearch={handleSearch} />
                     <div>
-                        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-10 md:p-20">
-                            {
-                                characters.map(character => (
-                                    <Characters key={character.id} character={character} />
-                                ))
-                            }
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6 md:p-12 auto-rows-fr">
+                            {characters.map((character) => (
+                                <Characters key={character.id} character={character} />
+                            ))}
                         </ul>
                     </div>
 
-                    <NavPage page={page} setPage={handlePageChange} totalPages={totalPages}/>
+                    <NavPage page={page} setPage={handlePageChange} totalPages={totalPages} />
                 </article>
 
 
