@@ -1,0 +1,10 @@
+Dependencias
+morgan
+express
+nodemon
+cookie-parser
+cors
+helmet
+jsonwebtoken
+mongoose
+nodemailer
